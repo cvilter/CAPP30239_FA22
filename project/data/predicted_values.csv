@@ -1,0 +1,10 @@
+metric,normal_value
+deg,98.6
+bpm_min,60
+bpm_max,100
+bo2_min,95
+bo2_max,100
+pef,443
+pef_over_pred_threshold,80
+fev1,3.41
+fev1_over_pred_threshold,80
