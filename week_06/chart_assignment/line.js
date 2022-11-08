@@ -24,7 +24,7 @@ d3.csv('data/mi_monthly.csv').then(data => {
         .range([margin.left, width - margin.right])
 
     let y = d3.scaleLinear()
-        .domain([0, d3.max(data, d => d.prop_mental_illness)])
+        .domain([0, d3.max(data, d => d.prop_mental_illness)]).nice()
         .range([height - margin.bottom, margin.top])
     
     // position & format y axis
