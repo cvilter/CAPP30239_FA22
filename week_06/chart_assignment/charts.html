@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3-Chart Assignment</title>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+    <style>
+     * {
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    #container {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    #chart { 
+      width: 100%; 
+    }
+
+    text {
+      font-size: 10px;
+    }
+
+    .y-axis path.domain { 
+      display: none;  
+    }
+
+    .y-axis line {
+      stroke: #ddd;
+      stroke-dasharray: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Exploration of Washington Post Police Violence Data</h1>
+    <p>This page explores Washington Post data on the more than 1,500 people killed by police in the U.S. in 2015. 
+        In particular, it explores the data on victims' mental illness status from multiple angles.
+    </p>
+    <br>
+  </div>
+
+  <div class="container">
+    <h3>Proportion of cases reported to involve mental illness</h1>
+    <p>An important reference point is the overall proportion of officer-involved deaths in the dataset which were reported to involve mental illness
+        ("Mental_illness" = True). A simple way to convey the values of a binary variable like this one is through a horizontal bar.
+        We see that the majority of the cases represented in our 2015 dataset were not flagged as involving mental illness, but a 
+        substantial minority of 21% were. <br><br>
+        Considering that our dataset is a national aggregation offered by the Washington Post, it's likely to be a cleaned-up version
+        of a significant number of smaller, different data sources from across the country. To better understand how the Washington Post's 
+        "Mental_illness" flag captures the complicated topic of mental illness, it would be useful to know what data sources fed into 
+        the larger dataset, how each source handled
+        the issue, and what decision rules were used to create the final flag.
+        <div class="horizontal_bar">
+        <div style="width:79%;background-color: #e3ca4c;float:left;">No mental illness<br />78.7%</div>
+        <div style="width:21%;background-color: #e46023;float:left;">Mental illness<br />21.3%</div>
+        <br> <br>
+    </div>
+  <br> <br>
+  </div> 
+
+  <div class="container">
+    <h3>Trends in proportion of cases involving mental illness over 2015</h1>
+        <p> Keeping in mind the overall average provided in our first chart, 21%, it's interesting to ask whether there were any 
+            trends in the proportion of police killings reported to involve a mentally ill victim over the course of 2015.
+            A line chart is a logical choice to represent this data because it allows us to easily understand movement in a variable 
+            of interest over time. <br><br>
+            Our line chart shows a wide range - from 12 to 31% - and a cluster of noticeably higher proportions from 
+            March to June compared to lower rates in the second half of the year, July to December. <br><br>
+            This chart would have more impact if it were combined with data from the surrounding years. Expanding our chart to contain
+            multiple cycles of data - or comparing line charts for mutliple years - would enable us to observe whether the cycle that appeared 
+            in 2015 constitutes an annual trend or an anomoly.
+        <div id="chart_time" class="line"></div>
+  <br> <br>
+  </div>
+
+  <div class="container">
+    <h3>Manner of death by mental illness status</h1>
+        <p> One way to dig deeper into the role of mental illness in police killings is to examine whether individuals with a mental illness
+            are markedly different than others across other variables of interest. Here we compare manner of death 
+            between those victims whose cases were flagged as involving mental illness and those that were not. 
+            We see that individuals with a mental illness were notably less likely to be shot and more likely to be tasered. 
+            Exact frequencies are provided for context. <br><br>
+            Given that we're comparing
+            a categorical variable with few categories (shot, tasered, both) across a simple binary (no mental illness / mental illness),
+            side-by-side donut charts effectively depict broad differences. Given additional categories, this type of visualization 
+            would be difficult to interpret.<br><br><br>
+
+            Note: Red sections represent individuals who were both shot and tasered.
+
+        <div id="chart_mod" class="ring"></div>
+  </div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="rings.js"></script>
+  <script src="line.js"></script>
+
+
+</html>
