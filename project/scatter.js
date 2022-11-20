@@ -4,7 +4,7 @@ d3.csv('data/clean/scatter_data.csv').then(data => {
 
   let height = 400,
     width = 600,
-    margin = ({ top: 25, right: 30, bottom: 35, left: 40 });
+    margin = ({ top: 25, right: 30, bottom: 40, left: 55});
 
   const svg = d3.select("#scatter")
     .append("svg")
@@ -44,5 +44,24 @@ d3.csv('data/clean/scatter_data.csv').then(data => {
     .attr("cy", d => y(d.fev1_over_pred_100))
     .attr("r", 2)
     .attr("opacity", 0.75);
+
+  // labels
+  svg.append("text")
+    .attr("class", "x-label")
+    .attr("text-anchor", "end")
+    .attr("x", width - margin.right)
+    .attr("y", height)
+    .attr("dx", "0.5em")
+    .attr("dy", "-0.5em") 
+    .text("PEF");
+    
+  svg.append("text")
+    .attr("class", "y-label")
+    .attr("text-anchor", "end")
+    .attr("x", -margin.top/2)
+    .attr("dx", "-0.5em")
+    .attr("y", 11)
+    .attr("transform", "rotate(-90)")
+    .text("FEV1");
     
 });

@@ -59,4 +59,14 @@ d3.json('data/clean/hist_after.json').then((data) => {
       .attr("text-anchor", "middle")
       .attr("fill", "#333");
   
+    // label
+    svg.append("text")
+      .attr("class", "x-label")
+      .attr("text-anchor", "end")
+      .attr("x", 48)
+      .attr("y", height)
+      .attr("dx", "0.5em")
+      .attr("dy", "-0.5em") 
+      .text("PEF After");
+
   });

@@ -13,7 +13,7 @@ d3.csv("data/clean/bar_data.csv").then(data => {
     // establish constaints for svg, range (below)
     const height = 600,
           width = 800,
-          margin = ({ top: 25, right: 30, bottom: 35, left: 50 })
+          margin = ({ top: 25, right: 30, bottom: 45, left: 50})
 
     // set up svg - references the "chart" ID in homework.html
     let svg = d3.select("#bar")
