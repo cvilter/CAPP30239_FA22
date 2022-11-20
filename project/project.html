@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Project</title>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    * {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 32px;
+      text-transform: none;
+      font-weight: 600;
+    }
+
+  </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lung Disease Diagnosis, Treatment, and Recovery</h1>
+    </div>
+
+    <div class="container">
+      <h3>PEF versus FEV1</h3>
+          <div id="scatter"></div>
+    <br> <br>
+    </div>
+
+    <div class="container">
+        <h3>FEV1 Over Time</h3>
+            <div id="line"></div>
+      <br> <br>
+      </div>
+
+    <div class="container">
+        <h3>PEF Before and After Treatment</h3>
+            <div id="hist_before"></div>
+            <div id="hist_after"></div>
+      <br> <br>
+      </div>
+
+    <div class="container">
+      <h3>Number of Qualitative Notes by Week</h3>
+          <div id="bar"></div>
+    <br> <br>
+    </div>
+
+</body>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="scatter.js"></script>
+<script src="line.js"></script>
+<script src="histogram.js"></script>
+<script src="histogram2.js"></script>
+<script src="bar.js"></script>
+
+</html>
