@@ -29,8 +29,8 @@ d3.csv('data/clean/line_data.csv').then(data => {
     svg.append("g")
       .attr("transform", `translate(${margin.left},0)`)
       .attr("class", "y-axis")
-      .call(d3.axisLeft(y).tickSizeOuter(0).tickFormat(d => d).tickSize(-width));
-    
+      .call(d3.axisLeft(y).tickSizeOuter(0).tickFormat(d => (d) + "%").tickSize(-width));
+
     // position & format x axis
     svg.append("g")
       .attr("transform", `translate(0,${height - margin.bottom})`)

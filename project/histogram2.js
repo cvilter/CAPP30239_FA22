@@ -17,7 +17,7 @@ d3.json('data/clean/hist_after.json').then((data) => {
     }
     
     const x = d3.scaleLinear()
-      .domain([80,135])
+      .domain([79,136])
       .range([margin.left, width - margin.right]);
   
     const y = d3.scaleLinear()
@@ -26,7 +26,7 @@ d3.json('data/clean/hist_after.json').then((data) => {
       
     svg.append("g")
       .attr("transform", `translate(0,${height - margin.bottom + 5})`)
-      .call(d3.axisBottom(x));
+      .call(d3.axisBottom(x).tickFormat(d => (d) + "%"));
   
     const binGroups = svg.append("g")
       .attr("class", "bin-group");
@@ -63,7 +63,7 @@ d3.json('data/clean/hist_after.json').then((data) => {
     svg.append("text")
       .attr("class", "x-label")
       .attr("text-anchor", "end")
-      .attr("x", 48)
+      .attr("x", 53)
       .attr("y", height)
       .attr("dx", "0.5em")
       .attr("dy", "-0.5em") 
