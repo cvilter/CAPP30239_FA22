@@ -1,11 +1,10 @@
 /* D3 Histogram */
 
-
 d3.json('data/clean/hist_before.json').then((data) => {
 
   const height = 180,
     width = 600,
-    margin = ({ top: 25, right: 10, bottom: 50, left: 10 }),
+    margin = ({top: 25, right: 10, bottom: 50, left: 10}),
     padding = 1;
 
   const svg = d3.select("#hist_before")
