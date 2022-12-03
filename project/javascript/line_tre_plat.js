@@ -6,7 +6,7 @@ Adapted from Tiffany France CAPP30239_FA22 class code
 d3.csv('data/clean/line_tre_plat.csv').then(data => {
 
     const height = 550,
-      width = 260,
+      width = 150,
       margin = ({top: 15, right: 30, bottom: 45, left: 55});
       
     const svg = d3.select("#line_tre_plat")
@@ -22,7 +22,7 @@ d3.csv('data/clean/line_tre_plat.csv').then(data => {
   
     let x = d3.scaleTime()
         .domain(d3.extent(data, d => d.date))
-        .range([margin.left, width - margin.right])
+        .range([margin.left, 200])
   
     let y = d3.scaleLinear()
         .domain([69, 110])
@@ -38,7 +38,7 @@ d3.csv('data/clean/line_tre_plat.csv').then(data => {
     svg.append("g")
       .attr("transform", `translate(0,${height - margin.bottom})`)
       .call(d3.axisBottom(x)
-        .ticks(3)
+        .ticks(2)
         .tickSizeOuter(0)
         .tickFormat(d3
         .timeFormat("%b %d"))); // abbreviated month names

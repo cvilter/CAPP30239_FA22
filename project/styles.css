@@ -60,4 +60,6 @@
     font-size: 10px;
   }
 
- 
+  .float_right {
+    float: right;
+  }
