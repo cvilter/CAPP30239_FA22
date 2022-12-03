@@ -1,4 +1,7 @@
-/* D3 Line Chart */
+/* 
+D3 Line Chart: All data (FEV1 over time)
+Adapted from Tiffany France CAPP30239_FA22 class code
+*/
 
 d3.csv('data/clean/line_data.csv').then(data => {
 

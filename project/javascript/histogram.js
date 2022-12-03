@@ -1,4 +1,7 @@
-/* D3 Histogram */
+/* 
+D3 Histogram: Before Treatment
+Adapted from Tiffany France CAPP30239_FA22 class code
+*/
 
 d3.json('data/clean/hist_before.json').then((data) => {
 

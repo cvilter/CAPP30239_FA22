@@ -1,4 +1,7 @@
-/* D3 Scatterplot */
+/* 
+D3 Scatterplot: FEV1 vs PEF
+Adapted from Tiffany France CAPP30239_FA22 class code
+*/
 
 d3.csv('data/clean/scatter_data.csv').then(data => {
 

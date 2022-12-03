@@ -1,4 +1,7 @@
-/* D3 Bar Chart */
+/* 
+D3 Bar Chart: Qualitative Data Collection over Time
+Adapted from Tiffany France CAPP30239_FA22 class code
+*/
 
 d3.csv("data/clean/bar_data.csv").then(data => { 
 
@@ -6,9 +9,6 @@ d3.csv("data/clean/bar_data.csv").then(data => {
     for (let d of data) {
         d.count_notes = +d.count_notes
     };
-
-    // sort data by highest to lowest "num" value
-    // data.sort((a, b) => d3.descending(a.count_notes, b.count_notes))
 
     // establish constaints for svg, range (below)
     const height = 600,
@@ -20,13 +20,6 @@ d3.csv("data/clean/bar_data.csv").then(data => {
         .append("svg")
         .attr("viewBox", [0, 0, width, height])
     
-    // let timeParse = d3.timeParse("%Y-%m-%d")
-
-    // for (let d of data) {
-    //     d.fev1_over_pred_100 = +d.fev1_over_pred_100; //force numeric
-    //     d.week = timeParse(d.week)
-    // }
-
     // establish domain (data values), range (space i.e. pixels)
     let x = d3.scaleBand()
         .domain(data.map(d => d.week_num))
