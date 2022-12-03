@@ -37,8 +37,6 @@ d3.json('data/clean/hist_after.json').then((data) => {
     .thresholds(6)
     .value(d => d.pef_over_pred_100)(data);
 
-  console.log(bins)
-
   let g = binGroups.selectAll("g")
     .data(bins)
     .join("g");
@@ -49,8 +47,6 @@ d3.json('data/clean/hist_after.json').then((data) => {
     .attr("y", height - margin.bottom)
     .attr("height", 0)
     .attr("fill", "blue")
-    .transition()
-    .duration(750)
     .attr("y", d => y(d.length))
     .attr("height", d => height - margin.bottom - y(d.length));
 

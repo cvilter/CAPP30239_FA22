@@ -5,7 +5,7 @@ Adapted from Tiffany France CAPP30239_FA22 class code
 
 d3.json('data/clean/hist_before.json').then((data) => {
 
-  const height = 180,
+  const height = 185,
     width = 600,
     margin = ({top: 25, right: 10, bottom: 50, left: 10}),
     padding = 1;
@@ -37,8 +37,6 @@ d3.json('data/clean/hist_before.json').then((data) => {
     .thresholds(10)
     .value(d => d.pef_over_pred_100)(data);
 
-  console.log(bins)
-
   let g = binGroups.selectAll("g")
     .data(bins)
     .join("g");
@@ -49,8 +47,6 @@ d3.json('data/clean/hist_before.json').then((data) => {
     .attr("y", height - margin.bottom)
     .attr("height", 0)
     .attr("fill", "blue")
-    .transition()
-    .duration(750)
     .attr("y", d => y(d.length))
     .attr("height", d => height - margin.bottom - y(d.length));
 

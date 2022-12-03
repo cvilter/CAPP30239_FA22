@@ -6,7 +6,7 @@ Adapted from Tiffany France CAPP30239_FA22 class code
 d3.csv('data/clean/line_pre_tre.csv').then(data => {
 
     const height = 500,
-      width = 800,
+      width = 700,
       margin = ({top: 15, right: 30, bottom: 45, left: 55});
       
     const svg = d3.select("#line_pre_tre")

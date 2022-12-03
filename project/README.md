@@ -16,4 +16,4 @@ Folders and files:
 - javascript/: js files for each visualization, labeled by type
 - planning/: contains pdf with original concept and sketches
 - styles.css: overarching style file
-- project.html: code to produce [this final result](https://cvilter.github.io/CAPP30239_FA22/project/project.html)
+- project.html: the html that produces [this final result](https://cvilter.github.io/CAPP30239_FA22/project/project.html)
