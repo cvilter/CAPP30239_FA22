@@ -42,15 +42,6 @@ d3.csv('data/clean/line_tre_plat.csv').then(data => {
         .tickSizeOuter(0)
         .tickFormat(d3
         .timeFormat("%b %d"))); // abbreviated month names
-  
-    svg.append("text")
-      .attr("class", "x-label")
-      .attr("text-anchor", "end")
-      .attr("x", width - margin.right)
-      .attr("y", height)
-      .attr("dx", "0.5em")
-      .attr("dy", "-0.5em") 
-      .text("Date");
     
     svg.append("text")
       .attr("class", "y-label")

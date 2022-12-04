@@ -30,33 +30,129 @@
 <body>
   <div class="container">
     <h1>Visualizing Lung Disease Diagnosis, Treatment, and Recovery</h1>
-    <p>Carolyn Vilter</p>
-    <p>Source: Personal data, 2019</p>
+    <p style="color:grey">
+      Carolyn Vilter <br> 
+      December 2022
+    </p>
     <br> 
   </div>
 
   <div class="container">
-    <h3>Correlation Between PEF and FEV1</h3>
+    <p>
+      I grew up knowing my body wasn’t exactly the same as other people’s. I had “moderate to severe” 
+      asthma and no memory of a day when I didn't take one short stack of medications shortly after waking up and 
+      another before bed. In a way, the lifelong ubiquitousness of my condition actually camouflaged it 
+      from me: I had no memories of onset or diagnosis, and medical routines were a simple fact of life.
+    </p>
+    <p>
+      When I was 23, the facts of my life underwent a dramatic shift. I started to feel sick, first in 
+      persistent bouts and then essentially all the time. I came down with acute pneumonia and ended 
+      up in the ER for the first time in my life, where doctors and nurses couldn’t stop asking me 
+      how I thought I’d gotten it - Was I around someone? Did something happen to me? I was at least 
+      as confused as they were. 
+    </p>
+    <p>
+      In the succeeding months, my allergist observed that the basic lung function numbers she 
+      collected every time I visited were stuck well below my baseline - around 80% of the predicted 
+      levels for my age, technically still “normal” but not nearly normal for me. In March of 2019, 
+      she ordered a CT scan and I began my medical journey in earnest.
+    </p>
+  </div>
+
+  <div class="container">
+    <br>
+    <h2>The Medical Journey</h2>
+    <p>
+      The CT came back highly irregular. Within weeks, I had met my first pulmonologist and had 
+      undergone a bronchoscopy, a scope of the lungs. Our finding: terrible-looking lungs with a 
+      rare, slow-growing underlying infection. More pulmonologists were acquired. In a twist I had 
+      not been expecting, the bronchoscopy itself induced a second acute pneumonia which led to my 
+      next medical milestone, my first hospital admission and multi-day stay. At the end of March, 
+      I was released, and two important steps lay ahead of me: recovering from the acute pneumonia 
+      and beginning treatment to resolve the underlying one. 
+    </p>
+    <p>
+      As this saga unfolded, I was two years into a four-year stint at the Urban Institute as a 
+      research analyst. As a researcher, and earlier as an economics student, I latched onto data 
+      analysis as a way to tangle with interesting programming puzzles while staying grounded in 
+      socially meaningful work. I relished the way thoughtful database design and informed analysis 
+      could turn complex situations into concrete insights. So I decided to apply the same tools to 
+      my otherwise out-of-control situation. 
+    </p>
+    <p>
+      For six months, from April to September of 2019, I kept a twice-daily Excel record of seven 
+      features of my health including heart rate, blood oxygen level, and two lung function metrics. 
+      The data tells the story of my slow recovery from acute pneumonia and its overlap with my 
+      entrée into treatment for the long-term underlying infection we had just learned was the 
+      cause of it all.
+    </p>
+    </div>
+
+  <div class="container">
+    <br>
+    <h2>Examining the Data</h2>
+    <p>
+      The two lung function metrics I had available to me at home were peak expiratory flow (PEF) 
+      and forced expiratory volume in the first second (FEV1). Both metrics can be captured with a 
+      handheld device that you blow into as hard as you can, and together they help characterize the 
+      health of your lungs.
+      <a href="#section1">[1]</a>
+      <a href="#section2">[2]</a> 
+      Expected PEF and FEV1 results are a function of your 
+      gender, height, and age, and the units are different and inscrutable, so it's easiest to 
+      understand them as percentages of expected values. 
+      <a href="#section3">[3]</a>
+    </p>
+    <p>
+      As I began to track my numbers, I observed that my PEF and FEV1 results were roughly correlated. 
+      When PEF went up, FEV1 was likely to improve, too. But the correlation wasn't perfect, and there 
+      was an obvious disparity in my results that jumps out when 6 months of PEF data is plotted against 
+      FEV1. 
+    </p>
+    <h3>PEF and FEV1 move together, but their levels are significantly different</h3>
     <div id="scatter"></div>
-    <br> <br>
-  </div>
+    <p>
+      The y axis above, which captures FEV1, ranges from 70 to 105% of predicted with data spread evenly 
+      from min to max. In contrast, the PEF values nearly all lie above 100% of predicted on the x axis, 
+      effortlessly reaching the high highs of 135%. This makes sense for someone with my 2019 
+      characteristics: both asthma and the underlying infection I had been diagnosed with are 
+      characterized by obstruction, which is best captured by FEV1. 
+      <a href="#section4">[4]</a>
+    </p>
+    <p>
+      One outlier stands out: a solitary data point at 82% PEF single-handedly extends the x axis fifteen 
+      percentage points to the left. This point is the very first row of my dataset, data which was 
+      recorded 3 days after my discharge from the hospital and 5 days before my data collection scheme 
+      began in earnest. Clearly, my PEF *had* been affected by acute pneumonia - it simply bounced back 
+      much more quickly than FEV1, so the trend was completely obscured by starting data collection 5 
+      days later.
+    </p>
+    </div>
 
   <div class="container">
-    <h3>Early FEV1</h3>
+    <h3>Before starting treatment, FEV1 recovery was slow</h3>
     <div style="display: flex; flex-direction: row;">
       <div>
-        <svg width="500" height="700" id="line_pre_tre"></svg>
+        <svg width="470" height="600" id="line_pre_tre"></svg>
       </div>
       <div>
-        <p style="margin-left: 60px;">
-          Paragraph here please 
-          Paragraph here please 
-          Paragraph here please 
-          Paragraph here please 
-          Paragraph here please 
-          Paragraph here please 
-          Paragraph here please 
-          Paragraph here please 
+        <p style="margin: -35px 20px 0px 70px">
+          This meant FEV1 was my sticking point. In the two and a half months that followed my bout with 
+          acute pneumonia, it saw routine, relatively volatile fluctuations.
+        </p>
+        <p style="margin: 25px 20px 0px 70px">
+          Nonetheless, its trajectory was relatively flat, with a slow but steady trend toward improvement. 
+          Recovery from pneumonia can be arduous, but this time we understood that I was hampered by an 
+          underlying infection. The recommendation was to wait for treatment, but in June, I made the 
+          choice to begin. 
+        </p>
+        <p style="margin: 240px 20px 0px 70px">
+          The plan involved many, many antibiotics. Their onset was staggered over several weeks so that 
+          individual side effects could be observed, and the ultimate result was many months of two to four 
+          daily antibiotics at a time.
+        </p>
+        <p style="margin: 25px 20px 0px 70px">
+          On June 26, I took the first dose.
         </p>
       </div>
     </div>
@@ -64,44 +160,158 @@
   </div>
 
   <div class="container">
-    <h3>23 Days of Treatment</h3>
     <div style="display: flex; flex-direction: row;">
       <div>
-        <p>
-          Paragraph here please 
-          Paragraph here please 
-          Paragraph here please 
-          Paragraph here please 
-          Paragraph here please 
-          Paragraph here please 
-          Paragraph here please 
-          Paragraph here please 
+        <p style="margin: 5px 10px 0px 0px">
+          It's difficult to imagine a more satisfying result. From June 26 through late July I 
+          embarked on a steep upward trajectory thanks to the addition of antibiotics to my recovery regimen. 
+          The hard facts don't always align with the experience, 
+          but in this case they did: I felt fundamentally better almost right away, the change was reflected
+          in my numbers, and the feeling didn't ebb.
+        </p>
+        <p style="margin: 455px 10px 0px 0px">
+          Around July 19, after the first twenty-three days of what would turn into many months of treatment, my FEV1 numbers 
+          completed their dramatic rise and entered a new plateau. Where 
+          previously I had hovered around the 80% mark - acceptable, but not normal for me - I now settled 
+          around the 100% mark. In 23 days, my entire baseline had been shifted back to where it belonged, 
+          and I stayed at 100% of predicted FEV1 for the remaining months of my data experiment.
         </p>
       </div>
       <div>
-        <svg width="320" height="700" id="line_tre_plat"></svg>
+        <h3 style="margin: 0px 0px 0px 75px">Twenty-three days of treatment</h3>
+        <svg style="margin: 10px 40px 0px 0px" width="350" height="700" id="line_tre_plat"></svg>
       </div>
     </div>
-    <br> <br>
   </div>
 
   <div class="container">
-    <h3>FEV1 Over Time</h3>
+    <h3>Putting the pieces together: two plateaus joined by a steep upward shift that began with treatment</h3>
     <div id="line"></div>
-    <br> <br>
   </div>
 
   <div class="container">
-    <h3>PEF Before vs. After Treatment</h3>
+    <p>
+      Clearly, the lung obstruction captured by FEV1 stood to improve significantly with antibiotic treatment
+      for my underlying infection. As illustrated in the scatterplot above, PEF and FEV1 always had 
+      sharply different ranges, and PEF was never in such dramatic need of a boost.
+      But over the six months that I recorded data, my PEF numbers followed a similar - if 
+      less stark - trajectory. 
+    </p>
+    <h3>PEF values shifted noticeably upward after the first day of treatment</h3>
     <div id="hist_before"></div>
     <div id="hist_after"></div>
-    <br> <br>
+    <p>
+      Histograms of PEF values before beginning treatment (June 26) and from the first day of treatment onward
+      demonstrate a clear discontinuity. Though my PEF numbers had never reflected the dramatic dip captured in FEV1, 
+      evidently there was still room for them to improve. By September, both metrics were back to normal.
+    </p>
   </div>
 
   <div class="container">
-    <h3>Number of Qualitative Notes by Week</h3>
+    <br>
+    <h2>The Metadata</h2>
+    <p>
+      When I dug up these data three years later, it occurred to me that my six-month-long record also conveyed 
+      a larger story about the experience of recovery.
+    </p>
+    <p>
+      I designed my original data collection spreadsheet with an eye toward analyzability: clearly defined columns, 
+      consistent formats, numeric data. But I decided to throw in one open text field with room for free-wheeling 
+      reflections on how I was actually feeling. My sense was that it could provide the hard facts with important 
+      context. In the beginning I wrote in it every day: “Some shortness of breath, ear pain, cough.” “Feeling tight 
+      and I did this because I was worried, but somehow managed my best read ever.” “Worried.”
+    </p>
+    <p>
+      But as the months wore on, I used the text field less and dramatically less, opting to focus on the essentials 
+      rather than linger over descriptions of my state of being. 
+    </p>
+    <p>
+      It occurred to me in retrospect that the frequency with which I filled in the text field, week over week, 
+      served as a proxy for something bigger: my level of preoccupation with my health.
+    </p>
+    <h3>Over time, the number of qualitative notes I recorded each week dropped off dramatically</h3>
     <div id="bar"></div>
-    <br> <br>
+    <p>
+      It’s clear that, while the hard facts were helpful enough to keep an eye on twice a day for six months, 
+      my upward trajectory eventually reassured me enough to let me step away from the text field. 
+    </p>
+  </div>
+
+  <div class="container">
+    <br>
+    <br> 
+    <br> 
+    <hr>
+    <h2>Reflections on My Project Process</h2>
+    <p>
+      As I searched for data that would lend itself to being visualized in the form of a story, it occurred 
+      to me that I had a dataset of my own that was waiting to be fully analyzed and understood. I decided 
+      to give it a closer look, and the story jumped right out.
+    </p>
+    <p>
+      The centrality of FEV1 and PEF to lung health and to my narrative made them the obvious choice for most 
+      of my visualizations. It was clear that the stark trends in FEV1 needed to be displayed in a line chart 
+      over time, and revealing the chart piece by piece allowed me to accompany the text without giving the whole 
+      picture away. I quickly decided to represent both FEV1 and PEF in terms of predicted values because their 
+      actual units (numbers like 3.3 and 350) don’t make sense to the average reader. Percentages allowed for 
+      instant comprehension. 
+    </p>
+    <p>
+      Some trial and error was required to solidify the formats of the other charts. 
+    </p>
+    <p>
+      I originally intended to overlay the two PEF histograms but found that the distributions weren’t quite 
+      distinct enough for the combined chart to be readable. Putting one after the other while preserving a 
+      common axis increased readability, and I found that having the post-treatment histogram “after” the first 
+      histogram on the page subtly emphasized the notion that it contained mutually exclusive “later” data. 
+    </p>
+    <p>
+      I also knew that I wanted to explore the correlation between PEF and FEV1. I originally considered turning 
+      each one into a line graph over time and overlaying them with two y axes. But I found that using a scatter 
+      plot introduced more visual variety to the overall project and gave a clearer picture of the associations 
+      and outliers in the data. Using a scatter plot also allowed me to remove the data from the time axis 
+      underlying the rest of my visualizations and see things in a different light.
+    </p>
+    <p>
+      Because I created this dataset myself (albeit three years ago), confined it to a few key variables of interest, 
+      and set the process up with analysis in mind, I encountered fewer data challenges than usual I know from 
+      experience with survey analysis, machine learning, and the like that data extraction, comprehension, cleaning, 
+      and wrangling can easily demand at least as much time as “the project itself.” Each of my D3 charts required 
+      its own cleaned, tailor-made dataset, but otherwise the data process for this project was much simplified.
+    </p>
+    <p>
+      Still, many wish list items did not make it into my project’s final form. Given more time, I would be 
+      interested to explore how the story could be enhanced by the remaining variables in my dataset - heart rate and 
+      blood oxygen level in particular. I also would have liked to explore more complicated chart types and introduce 
+      interactivity. For example, it would be interesting to be able to put any point in the PEF/FEV1 scatterplot in 
+      context by hovering over it and seeing the date it was recorded. I would also be curious to separate out my data 
+      by whether it was collected in the morning or at night and assess whether the volatility of FEV1 and PEF (as 
+      captured in the FEV1 line chart) is a pendulum driven by time of day or simply represents random day-over-day 
+      variation.
+    </p>
+    <p>
+      My greatest data wish would be to have personal FEV1 and PEF data extending out infinitely in either direction, 
+      filling in the missing context for these findings. These six months in 2019 are perfect fodder for analysis because  
+      they represent such a unique and dynamic moment, but they beg for contextualization for the same reason. At least 
+      I can say with confidence - although not in laborious detail - that my numbers today are very good.
+    </p>
+  </div>
+
+  <div class="container">
+    <br>
+    <br>
+    <h4>Sources</h4>
+    <p id="section1">[1] <a href="https://www.sciencedirect.com/topics/neuroscience/peak-expiratory-flow">Peak expiratory flow</a></p>
+    <p id="section2">[2] <a href="https://www.ncbi.nlm.nih.gov/books/NBK540970/">Forced expiratory volume</a></p>
+    <p id="section3">[3] <a href="https://vitalograph.com/resources/normal-values/ers-polgar-normal-values/">Normal spirometry values</a></p>
+    <p id="section4">[4] <a href="https://pubmed.ncbi.nlm.nih.gov/12421241/">Airway obstruction and the relationship between FEV1 and PEF</a></p>
+    <p style="color:grey">
+      <br>
+      <br>
+      Data: Carolyn Vilter, 2019 <br>
+      Analysis: Carolyn Vilter, 2022 
+    </p>
+    <br> 
   </div>
 
 </body>
