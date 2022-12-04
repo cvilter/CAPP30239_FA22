@@ -3,10 +3,9 @@
 ### Fall 2022 Final Project
 #### Carolyn Vilter
 
-This repository contains data, javascript, html, ipynb data cleaning, and pdf planning files for my Data Viz final project. 
-In it, I analyze personal data from 2019 spanning my 6-month recovery from an unexpected bout with pneumonia and the resulting
-lung disease diagnosis, treatment, and recovery. The dramatic trends, intuitive associations, and satisfying outcomes captured
-in the dataset make perfect fodder for visualization.
+This repository contains json and csv data, ipynb data cleaning, javascript, and html files for my December 2022 Data Viz final project. 
+In it I analyze personal data from 2019 spanning my 6-month recovery from an unexpected bout of pneumonia and the resulting
+lung disease diagnosis, treatment, and recovery. 
 
 Folders and files:
 - data/
